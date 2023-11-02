@@ -7,6 +7,8 @@ void main() {
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  final request_url = 'https://openapi.naver.com/v1/search/encyc.json';
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
