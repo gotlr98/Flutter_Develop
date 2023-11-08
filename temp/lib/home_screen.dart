@@ -25,19 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
     if (response.statusCode == 200) {
       Map<String, dynamic> content = json.decode(response.body);
       List<dynamic> data = List.from(content['items']).toList();
-      List<String> title = data.map((e) {
-        String title = e['title'];
-        title = title.replaceAll('</b>', '');
-        title = title.replaceAll('<b>', '');
-        return title;
-      }).toList();
-
-      List<String> description = data.map((e) {
-        String description = e['description'];
-        description = description.replaceAll('</b>', '');
-        description = description.replaceAll('<b>', '');
-        return description;
-      }).toList();
 
       for (var i in data) {
         dict.add(Dict.fromJson(i));
